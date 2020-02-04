@@ -20,8 +20,10 @@ public class Exam04Controller {
 	}
 	
 	@RequestMapping("/create")
-	public String create(@Validated UserForm form, BindingResult result, RedirectAttributes redirectAttributes,
-			Model model) {
+	public String create(@Validated UserForm form
+			, BindingResult result
+			, RedirectAttributes redirectAttributes
+			,Model model) {
 		if (result.hasErrors()) {
 			return index(model);
 		}
