@@ -11,7 +11,7 @@ public class UserForm {
 	@NotBlank(message="年齢は必須です")
 	private String age;
 
-	@Size(min=5,max=250,message="コメントは5文字以上250文字以内で記載してください")
+	@Size(min=10,max=250,message="コメントは10文字以上250文字以内で記載してください")
 	private String comment;
 
 	public int getIntAge() {
