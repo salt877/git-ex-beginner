@@ -20,8 +20,9 @@ public class Ex03Controller {
 	
 	@RequestMapping("/buy-item")
 	public String buyItem(Integer item1,Integer item2,Integer item3) {
-		application.setAttribute("taxex", item1+item2+item3);
-		application.setAttribute("taxin", (item1+item2+item3)*110/100);
+		int excludedTaxTotalPrice = item1+item2+item3;
+		application.setAttribute("taxex", excludedTaxTotalPrice);
+		application.setAttribute("taxin", excludedTaxTotalPrice*110/100);
 		System.out.println(item1);
 		return"exam03-result";
 	}
